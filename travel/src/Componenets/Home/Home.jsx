@@ -276,7 +276,7 @@ useEffect(()=>
     const data1=await axios.get('Background.json')
     
     
-    console.log(data1)
+   
     const Url=data1.data.find((url)=>url.country===selectedCountry.label)
    console.log(Url.flag);
    seturl(Url.flag)
@@ -294,31 +294,48 @@ fetchData();
 console.log(URL)
 
   return (
-   <>
+   <div class='overflow-hidden '>
 
 
-  <div className="flex h-screen justify-center items-center flex-col">
-    <div className="w-full h-screen  bg-cover bg-center  backdrop-blur-3xl" style={{ backgroundImage: `url("${URL}") `}} >
+  <div className="m-0 p-0 h-[565px]  justify-center items-center ">
+    <div className=" bg-cover bg-center blur-sm absolute inset-20 z-0 inline-block " style={{ backgroundImage: `url("${URL}") `}} ></div>
  
-     <div className='text-4xl  justify-center  pt-16 mb-7'><h1> Here To Get You There </h1></div>
-      
+     <div className=' z-10 text-4xl  justify-center relative top-20 my-auto mx-auto mb-7 text-purple-600 font-bold'><h1> Here To Get You There </h1></div>
+     <div className=' items-center justify-center relative top-20 my-auto mx-auto '>
    <CountryDropdown 
    countries ={countries} 
    onCountrychange={handleChange}
    selectedCountry={selectedCountry}
    />
-
+   <a class=' relative top-20 bg-grey-300 border border-blue-500 font-bold rounded-lg px-2 py-3 mt-30  text-purple-500 hover:text-purple-700 mb-0'  href='#section1'>Get Started</a>
 </div>
-     <div >
-   </div>
-    
-  
-     
-    
-  </div>
-
+</div>
+<h1 class='font-bold text-3xl mb-10'>What WE Offer</h1>
+<div class='flex flex-row  items-center  m-0 p-0' id="section1">
+  <div class='h-[500px] w-1/4 bg-green-900 bg-cover bg-center text-white font-bold ' style={{ backgroundImage: `url("https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?q=80&w=1896&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") `}}>
+   <div>Student</div> 
+    <a class=' mt-[270px] inline-block bg-white border border-blue-500 font-bold rounded-lg px-2 py-3 w-[159px] text-purple-500 hover:text-purple-700 mb-10'href='#'>Exchange Program</a>
+    <a class='inline-block bg-grey-300 bg-white border border-blue-500 font-bold rounded-lg px-2 py-3 w-[159px]  text-purple-500 hover:text-purple-700 mb-0' href='#'>Travel Package</a>
+    </div>
+  <div class=' h-[500px] w-1/4 bg-cover bg-center bg-green-900  '   style={{ backgroundImage: `url("https://plus.unsplash.com/premium_photo-1671069848029-a0d8c3b153a7?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") `}}>
+  <div> College</div>
+    <a class=' mt-[270px] inline-block bg-white border border-blue-500 font-bold rounded-lg px-2 py-3 w-[159px] text-purple-500 hover:text-purple-700 mb-10'href='#'>Exchange Program</a>
+    <a class='inline-block bg-grey-300 bg-white border border-blue-500 font-bold rounded-lg px-2 py-3 w-[159px]  text-purple-500 hover:text-purple-700 mb-0' href='#'>Travel Package</a>
+    </div>
+  <div class='h-[500px] w-1/4  bg-cover bg-center bg-green-900  '   style={{ backgroundImage: `url("https://images.unsplash.com/photo-1543357480-c60d40007a3f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGdyb3VwJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D") `}}>
+  <div> Individual</div>
+    <a class=' mt-[270px] inline-block bg-white border border-blue-500 font-bold rounded-lg px-2 py-3 w-[159px] text-purple-500 hover:text-purple-700 mb-10'href='#'>Exchange Program</a>
+    <a class='inline-block bg-grey-300 bg-white border border-blue-500 font-bold rounded-lg px-2 py-3 w-[159px]  text-purple-500 hover:text-purple-700 mb-0' href='#'>Travel Package</a>
+    </div>
+  <div class='h-[500px] w-1/4 bg-cover bg-center bg-green-900  '   style={{ backgroundImage: `url("https://images.unsplash.com/photo-1542560453-88e10bdc429f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3JvdXAlMjB0b3VyaXNtfGVufDB8fDB8fHww") `}}>
+  <div>  Group</div>
+    <a class=' mt-[270px] inline-block bg-white border border-blue-500 font-bold rounded-lg px-2 py-3 w-[159px] text-purple-500 hover:text-purple-700 mb-10'href='#'>Exchange Program</a>
+    <a class='inline-block bg-grey-300 bg-white border border-blue-500 font-bold rounded-lg px-2 py-3 w-[159px]  text-purple-500 hover:text-purple-700 mb-0' href='#'>Travel Package</a>
+    </div>
+</div>
+<div>Reviews from Our Clients</div>
    
-   </>
+  </div>
   )
 }
 

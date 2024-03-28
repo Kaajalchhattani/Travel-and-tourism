@@ -20,7 +20,7 @@ import Select from 'react-select';
     
   return (
     <div className='flex justify-center m-auto'>
-    <h1 className='ml-7 mr-7 text-xl'>Select Your Destination </h1>
+    <h1 className='ml-7 mr-7 text-xl text-purple-300 text-bold'>Select Your Destination </h1>
    
     <Select className=' w-full max-w-xs rounded border '
           options={options}

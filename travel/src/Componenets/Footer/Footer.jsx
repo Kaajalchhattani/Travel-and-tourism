@@ -3,9 +3,9 @@ import{Link,NavLink} from 'react-router-dom'
 
 function Footer() {
   return (
-    <>
+    <div class='m-0 p-0'>
     
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col ">
     <footer className="mt-auto">
     <div>
     <h2>SAY HELLO</h2>
@@ -13,7 +13,7 @@ function Footer() {
     </div>
     
     <div className='flex justify-center '>
-        <img src="./travel\20673.png"/ >
+        <img src="./travel\20673.png" / >
         <img src="./travel\95627.png"  />
         <img src="./travel\5811465.png" />
 
@@ -32,7 +32,7 @@ function Footer() {
     </footer>
     </div>
       
-    </>
+    </div>
   )
 }
 
